@@ -54,3 +54,14 @@ Explanation: The endWord "cog" is not in wordList, therefore no possible transfo
 
 
 
+## version-2
+
+- 有了上面的失败经验，这一次我首先利用BFS构造出一棵树，如下图所示
+
+  ![reverseOrderTree](img/reverseOrderTree.jpeg)
+
+- 紫色的是beginWord，红色的是endWord，从紫色节点开始进行广度优先搜索，一直到红色节点入队列为止。在探索过程中，构建一棵反向的BFS搜索树。
+
+- 根据上面的树，从红色节点开始运行深度搜索，利用回溯即可获得所有最短路径。
+
+- 本来以为这个版本的程序运行地会很快，不过测试结果却不是很如意，这一点让我有点疑惑。不过测试样例都能通过。
